@@ -1,0 +1,17 @@
+Metadata-Version: 2.1
+Name: text-based-lib
+Version: 1.2
+Summary: A library for creating text-based games in the terminal
+Home-page: https://tblib-docs.devplodocus.repl.co
+Author: gugu256 (Gustave Dufresne-Walter)
+Author-email: gugu256@mail.com>
+License: MIT License
+Keywords: python,lightweight,game-development,terminal-based,terminal-game,text-based-game
+Classifier: Development Status :: Releasing
+Classifier: Intended Audience :: Developers/Game developers/Beginners
+Classifier: Programming Language :: Python :: 3
+Classifier: Operating System :: Unix
+Classifier: Operating System :: MacOS :: MacOS X
+Classifier: Operating System :: Microsoft :: Windows
+Description-Content-Type: text/markdown
+License-File: LICENSE
