@@ -1,17 +1,16 @@
-#                          ------------------                         #
-#                          | Text-Based Lib |                         #
-#                          ------------------                         #
-#                                                                     #
-# Devs : @NaolNinja, @PancakeDev, @devplodocus                        #
-# Originally created my PancakeDev (aka Krayse) www.beacons.ai/krayse #
-# With the help of canard (aka devplodocus) www.znap.link/canard      #
-# Typewriting effect by NaolNinja (www.replit.com/@NaolNinja)         #
-# NPC system by canard (aka devplodocus) www.znap.link/canard         #
+#                          ------------------                          #
+#                          | Text-Based Lib |                          #
+#                          ------------------                          #
+#                                                                      #
+# Devs : @NaolNinja, @gugu256, @canard                                 #
+# Originally created my gugu256 (aka PancakeDev) www.gugu256.github.io #
+# With the help of canard (aka devplodocus) www.canard101.github.io    #
+# Typewriting effect by NaolNinja (www.replit.com/@NaolNinja)          #
 
 import platform # To detect the os type
 import sys # Used in the typewrite function
 import time # To sleep, obviously
-import pickle # To save and get the data
+import pickle # To save and get the data 
 import colorama # To color the console
 from os import system as cmd
 from os import getcwd, listdir
@@ -19,6 +18,7 @@ from os import getcwd, listdir
 cmd("") # Init command prompt
 colorama.init() # Initializes colorama
 
+__version__ = "1.2"
 
 # DATA #
 
@@ -31,7 +31,9 @@ else:
   dialogspath = ""
   dialogs = []
 
-colors = { # Quicker way to add color in the console
+colors = { 
+  """
+  Quicker way to add color in the console"""
   "red": colorama.Fore.RED,
   "green": colorama.Fore.GREEN,
   "yellow": colorama.Fore.YELLOW,
@@ -39,7 +41,9 @@ colors = { # Quicker way to add color in the console
   "default": colorama.Style.RESET_ALL,
 }
 
-style = { # Quicker way to add style in the console
+style = { 
+  """
+  Quicker way to add style in the console"""
   "dim": colorama.Style.DIM,
   "normal": colorama.Style.NORMAL,
   "bright": colorama.Style.BRIGHT
@@ -134,54 +138,90 @@ def getImage(imageData):
 
 # Now THIS is where it gets interesting !
 def print_pixel_image(imgpath: str):
+  """
+  Example usage : print_pixel_image("splashscreen.pci")
+  """
   getImage(processPixel(processLines(imgpath), False))
 
 def print_pixel_set(pixelset: list):
+  """
+  Example usage : print_pixel_set(splashscreen)
+  """
   getImage(processPixel(pixelset, False))
+
+
 
 # OTHER FUNCTIONS #
 
-def w(seconds): # Equivalent of time.sleep(), but quicker to use 
+def w(seconds): 
+  """
+  Equivalent of time.sleep(), but quicker to use
+  """ 
   time.sleep(seconds)
 
-def clear(): # Cross-platform console clearer
+def clear(): 
+  """
+  Cross-platform console clearer
+  """
   ostype = platform.system()
   if ostype == "Linux" or ostype == "Darwin":
     cmd("clear")
   else:
     cmd("cls")
 
-def q(): # Basic quit function
+def q(): 
+  """
+  Basic quit function
+  """
   c = inp("Are you sure you want to quit ?\ny/n")
   if c == "y":
     quit()
   else:
     pass
 
-def inp(prompt: str): # Quicker complete input
+def inp(prompt: str): 
+  """
+  Quicker complete input
+  """
   userchoice = input(f"{prompt}\n> ")
   return userchoice
 
-def pe(): # "Press enter" basic function
+def pe(): 
+  """
+  "Press enter" basic function
+  """
   input("Press Enter to continue./")
 
-def pev(verb): # "Press enter" basic function with the possibilty to change the verb
+def pev(verb): 
+  """
+  Press enter" basic function with the possibilty to change the verb
+  Example : pev(mine) --> "Press enter to mine" 
+  """
   input(f"Press Enter to {verb}./")
 
-def tw(text: str): # Typewrites text (by @NaolNinja on replit)
+def tw(text: str): 
+  """
+  Typewrites text (by @NaolNinja on replit.com)
+  """
   for char in text:
     sys.stdout.write(char)
     sys.stdout.flush()
     w(0.065)
   print("")
 
-def titlescreen(title: str, underline_char: str, creds: str): # Simple way to make the title screen
+def titlescreen(title: str, underline_char: str, creds: str): 
+  """
+  Simple way to output a title screen
+  """
   print(title)
   print(len(title)*underline_char)
   print(creds)
   print("")
 
-def set_dialogs(path: str): # To get a different dialogs set if needed
+def set_dialogs(path: str): 
+  """
+  To get a different dialogs set if needed
+  """
   global dialogspath
   global dialogs
   dialogspath = path
@@ -191,7 +231,10 @@ def set_dialogs(path: str): # To get a different dialogs set if needed
     raise FileNotFoundError("Dialogs file not found")
   dialogs = dialogs.splitlines()
 
-def passage(text: str, options: list, functions: list, typewrite: bool): # Passage function
+def passage(text: str, options: list, functions: list, typewrite: bool): 
+  """
+  Passage function
+  """
   while True:
     clear()
     if typewrite:
@@ -212,20 +255,28 @@ def passage(text: str, options: list, functions: list, typewrite: bool): # Passa
       pe()
   eval(f)
 
-def say(text: str, typewrite: bool): # Better way to print
+def say(text: str, typewrite: bool): 
+  """
+  Better way to print text
+  """
   if typewrite:
     tw(text)
   else:
     print(text)
   pe()
 
-def save_data(data: object, filename: str): # Complete saving system
+def save_data(data: object, filename: str): 
+  """
+  Complete saving function
+  """
   with open(filename, "wb") as pickle_file:
     pickle.dump(data, pickle_file)
   print(save_sentence)
   pe()
   
-def load_data(filename: str): # Returns data from a saved file
+def load_data(filename: str): 
+  """
+  Returns data from a saved file"""
   with open(filename, "rb") as pickle_file:
     data = pickle.load(pickle_file)
   return data
