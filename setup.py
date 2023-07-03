@@ -19,8 +19,7 @@ setup(
     install_requires=['colorama'],
     keywords=['python', 'lightweight', 'game-development', 'terminal-based', 'terminal-game', 'text-based-game'],
     classifiers=[
-        "Development Status :: Releasing",
-        "Intended Audience :: Developers/Game developers/Beginners",
+        "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",
         "Operating System :: MacOS :: MacOS X",
