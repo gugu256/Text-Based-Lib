@@ -32,7 +32,7 @@ try:
     os.mkdir(sys.argv[2])
     os.chdir(sys.argv[2])
     ostype = platform.system()
-    cmd('echo ' + "from textbasedlib import tblib" + " > main.py")
+    cmd('echo ' + "import textbasedlib.tblib as tblib" + " > main.py")
     cmd('echo ' + "Our adventure is set in the fair town of Reinsburg.. " + '> dialogs.txt')
     print(f"{sys.argv[2]} Project created !")
     input("Press enter to continue./")
