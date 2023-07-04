@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '1.0.0'
+VERSION = '1.2'
 DESCRIPTION = 'A library for creating text-based games in the terminal'
 LONG_DESCRIPTION = open("README.md").read()
 # Setting up
