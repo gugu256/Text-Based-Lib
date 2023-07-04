@@ -1,6 +1,6 @@
 Metadata-Version: 2.1
 Name: textbasedlib
-Version: 1.0
+Version: 1.0.0
 Summary: A library for creating text-based games in the terminal
 Home-page: https://tblib-docs.devplodocus.repl.co
 Author: gugu256 (Gustave Dufresne-Walter)
