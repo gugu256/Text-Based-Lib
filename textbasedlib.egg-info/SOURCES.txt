@@ -1,0 +1,11 @@
+LICENSE
+README.md
+setup.py
+textbasedlib/__init__.py
+textbasedlib/plugin_manager.py
+textbasedlib/tblib.py
+textbasedlib.egg-info/PKG-INFO
+textbasedlib.egg-info/SOURCES.txt
+textbasedlib.egg-info/dependency_links.txt
+textbasedlib.egg-info/requires.txt
+textbasedlib.egg-info/top_level.txt

@@ -1,4 +1,4 @@
 py -m pip install wheel
 py setup.py sdist bdist_wheel
 py -m pip install twine
-py -m pip upload dist/*
+py -m twine upload dist/*
