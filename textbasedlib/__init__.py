@@ -1,1 +1,1 @@
-from tblib import *
+import textbasedlib.tblib as tblib
