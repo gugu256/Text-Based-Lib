@@ -1,11 +1,12 @@
-#                          ------------------                          #
-#                          | Text-Based Lib |                          #
-#                          ------------------                          #
-#                                                                      #
-# Devs : @NaolNinja, @gugu256, @canard                                 #
-# Originally created my gugu256 (aka PancakeDev) www.gugu256.github.io #
-# With the help of canard (aka devplodocus) www.canard101.github.io    #
-# Typewriting effect by NaolNinja (www.replit.com/@NaolNinja)          #
+#                          ------------------                              #
+#                          | Text-Based Lib |                              #
+#                          ------------------                              #
+#                                                                          #
+# Devs : @NaolNinja, @gugu256, @canard, @El1teWatermelon                   #
+# Originally created my gugu256 (aka PancakeDev) www.gugu256.github.io     #
+# With the help of canard (aka devplodocus) www.canard101.github.io        #
+# Typewriting effect by NaolNinja (www.replit.com/@NaolNinja)              #
+# PCI File system by El1teWatermelon (www.github.com/El1teWatermelonGames) #
 
 import platform # To detect the os type
 import sys # Used in the typewrite function
@@ -14,6 +15,7 @@ import pickle # To save and get the data
 import colorama # To color the console
 from os import system as cmd
 from os import getcwd, listdir
+import os
 
 cmd("") # Init command prompt
 colorama.init() # Initializes colorama
@@ -21,6 +23,21 @@ colorama.init() # Initializes colorama
 __version__ = "1.2"
 
 # DATA #
+
+arg_ = ""
+
+try:
+  arg_ = sys.argv[1]
+  if arg_ == "new_project":
+    os.mkdir(sys.argv[2])
+    os.chdir(sys.argv[2])
+    ostype = platform.system()
+    cmd('echo ' + "from textbasedlib import tblib" + " > main.py")
+    cmd('echo ' + "Our adventure is set in the fair town of Reinsburg.. " + '> dialogs.txt')
+    print(f"{sys.argv[2]} Project created !")
+    input("Press enter to continue./")
+except:
+  pass
 
 files = listdir(getcwd())
 if "dialogs.txt" in files:
