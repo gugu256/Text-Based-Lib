@@ -14,7 +14,9 @@ Then, you can move to your coding directory and initalize and empty TBLIB projec
 
 And there you go!
 
-Now you can go and explore the documentation : https://tblib-docs.devplodocus.repl.co
+Now you can go and explore the online documentation : https://tblib-docs.devplodocus.repl.co
+
+But a lot of documentation is contained in the docstring, so you can just explore textbasedlib to learn it.
 
 # Authors
 

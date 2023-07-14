@@ -2,7 +2,7 @@ from setuptools import setup, find_packages
 import codecs
 import os
 
-VERSION = '1.2'
+VERSION = '1.3'
 DESCRIPTION = 'A library for creating text-based games in the terminal'
 LONG_DESCRIPTION = open("README.md").read()
 # Setting up
@@ -20,6 +20,7 @@ setup(
     install_requires=['colorama'],
     keywords=['python', 'lightweight', 'game-development', 'terminal-based', 'terminal-game', 'text-based-game'],
     classifiers=[
+        "Development Status :: 5 - Production/Stable",
         "Intended Audience :: Developers",
         "Programming Language :: Python :: 3",
         "Operating System :: Unix",

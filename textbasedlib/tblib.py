@@ -272,6 +272,41 @@ def passage(text: str, options: list, functions: list, typewrite: bool):
       pe()
   eval(f)
 
+class Passage():
+  """
+  Passage Class
+  """
+  
+  def __init__(self, text: str, options: list, passages: str, typewrite: bool):
+    self.text = text
+    self.options = options
+    import ast
+    #print(passages)
+    self.passages = eval(passages)
+    self.typewrite = typewrite
+  
+  def run(self):
+    self.__init__(self.text, self.options, self.passages, self.typewrite)
+    while True:
+      clear()
+      if self.typewrite:
+        tw(self.text)
+      else:
+        print(self.text)
+      print("")
+      for i in range(0, len(self.options)):
+        print(f"{i+1} : {self.options[i]}")
+      userchoice = input("> ")
+      if int(userchoice) <= (len(self.options)+1):
+        f = self.passages[(int(userchoice) - 1)]
+        break
+      elif userchoice == "q" or userchoice == "quit":
+        q()
+      else:
+        print("Please enter a choice")
+        pe()
+    f.run()
+
 def say(text: str, typewrite: bool): 
   """
   Better way to print text
